@@ -2,9 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 const getData = async (id) => {
-  const res = await fetch("http://localhost:3000/api/post/" + id, {
-    cache: "no-store",
-  });
+  const res = await fetch("http://localhost:3000/api/post/" + id);
   const data = await res.json();
   return data;
 };
